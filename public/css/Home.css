@@ -1,0 +1,61 @@
+
+    html, body {
+
+    }
+
+    .full-height {
+        margin-top: 18%;
+    }
+
+    .flex-center {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .position-ref {
+        position: relative;
+    }
+
+    .top-right {
+        position: absolute;
+        right: 10px;
+        top: 18px;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .title {
+        font-size: 84px;
+    }
+
+    .links > a {
+        color: #636b6f;
+        padding: 0 25px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .m-b-md {
+        color: linear-gradient(#353638, #646566);
+        font-family: 'Anton', sans-serif;;
+        font-weight: 200;
+        margin: 0;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .button
+    {
+      margin-right: 2%;
+    }
+    .Login
+    {
+      color: white;
+      text-decoration: none;
+    }
