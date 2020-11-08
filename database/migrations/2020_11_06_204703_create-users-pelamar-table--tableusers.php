@@ -15,17 +15,17 @@ class CreateUsersPelamarTableTableusers extends Migration
     {
       Schema::create('pelamar', function (Blueprint $table) {
           $table->bigIncrements('id');
-          $table->string('nama');
-          $table->date  ('tanggal_lahir');
-          $table->date  ('pekerjaan');
-          $table->date  ('pendidikan');
-          $table->date  ('alamat');
-          $table->date  ('no_handphone');
+          $table->string('name');
+          $table->string('alamat2');
+          $table->string('tglahir');
+          $table->string('pekerjaan');
+          $table->string('pendidikan');
+          $table->string('phone2');
           $table->string('email')->unique();
           $table->timestamp('email_verified_at')->nullable();
-          $table->string  ('username');
+          $table->string('username');
           $table->string('password');
-          $table->string  ('No_KTP');
+          $table->string('KTP');
           $table->rememberToken();
           $table->timestamps();
       });
@@ -38,6 +38,6 @@ class CreateUsersPelamarTableTableusers extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('pelamar');
     }
 }

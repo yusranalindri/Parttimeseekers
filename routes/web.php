@@ -14,10 +14,11 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/register_mitra', 'HomeController@tampilregismitra')->name('register.mitra');
-Route::get('/register_pelamar', 'HomeController@tampilregispelamar')->name('register.pelamar');
 Route::get('/login', 'HomeController@login')->name('login');
+Route::get('/register_mitra', 'RegisterMitraController@tampilregismitra')->name('register.mitra');
+Route::get('/register_pelamar', 'RegisterMitraController@tampilregispelamar')->name('register.pelamar');
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();

@@ -49,13 +49,16 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'nama perusahaan' => ['required', 'string', 'max:255'],
-            'alamat' => ['required', 'string', 'string', 'max:255'],
-            'bidang' => ['required', 'string', 'string', 'max:255'],
-            'no.handphone' => ['required', 'string', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255'],
+            'alamat2' => ['required', 'string','string', 'max:255'],
+            'tglahir' => ['required', 'string', 'string', 'max:255'],
+            'pekerjaan' => ['required', 'string', 'string', 'max:255'],
+            'pendidikan' => ['required', 'string', 'string', 'max:255'],
+            'phone2' => ['required', 'string', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'username' => ['required', 'string', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'KTP' => ['required', 'string', 'string', 'max:255'],
         ]);
     }
 
@@ -68,9 +71,16 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'name' => ['required', 'string', 'max:255'],
+            'alamat2' => $data['alamat2'],
+            'tglahir' => $data['tglahir'],
+            'pekerjaan' => $data['pekerjaan'],
+            'pendidikan' => $data['pendidikan'],
+            'phone2' => $data['phone2'],
             'email' => $data['email'],
+            'username' => $data['username'],
             'password' => Hash::make($data['password']),
+            'KTP' => $data['KTP'],
         ]);
     }
 }
